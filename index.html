@@ -12,6 +12,9 @@
             --text-secondary: #8b949e;
             --accent-color: #58a6ff;
             --border-color: #30363d;
+            --thm-color: #ff0000;
+            --htb-color: #9fef00;
+            --cyberdef-color: #007bff;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -30,10 +33,20 @@
             text-align: center;
             margin-bottom: 50px;
         }
+        /* Profile Image Style */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 15px;
+        }
         h1 {
             color: var(--accent-color);
             font-size: 2.5em;
             margin-bottom: 10px;
+            margin-top: 0;
         }
         h2 {
             border-bottom: 1px solid var(--border-color);
@@ -52,14 +65,76 @@
             padding: 20px;
             margin-bottom: 20px;
         }
-        .card h3 {
+        
+        /* Carousel Styles */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding-bottom: 15px;
+        }
+        /* Styling the scrollbar for webkit */
+        .carousel-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .carousel-container::-webkit-scrollbar-track {
+            background: var(--container-bg);
+            border-radius: 8px;
+        }
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 8px;
+        }
+        .carousel-container::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+        .carousel-card {
+            flex: 0 0 320px; /* Width of each project card */
+            scroll-snap-align: start;
+            background-color: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+        }
+        .carousel-card h3 {
             margin-top: 0;
             color: #fff;
             font-size: 1.2em;
         }
-        .card p {
-            margin-bottom: 0;
+        
+        /* Platform Buttons */
+        .platform-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
         }
+        .platform-btn {
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #fff !important;
+            text-decoration: none !important;
+            transition: opacity 0.3s;
+        }
+        .platform-btn:hover {
+            opacity: 0.8;
+        }
+        .btn-thm { background-color: var(--thm-color); color: #fff;}
+        .btn-htb { background-color: var(--htb-color); color: #000 !important;}
+        .btn-cyberdef { background-color: var(--cyberdef-color); color: #fff;}
+        
         ul {
             padding-left: 20px;
             margin: 0;
@@ -80,8 +155,10 @@
 
 <div class="container">
     <header>
-        <h1>Omar Hassan</h1>
-        <p class="subtitle">SOC Analyst | Detection Engineer | Digital Forensics Enthusiast</p>
+        <!-- Replace 'your-profile-photo.jpg' with the actual link/path to your photo -->
+        <img src="your-profile-photo.jpg" alt="Omar Hassan" class="profile-img">
+        <h1>Omar Mohamed Hassan</h1>
+        <p class="subtitle">SOC Analyst | SOC Engineer | AI & Automation Enthusiast</p>
     </header>
 
     <section>
@@ -95,6 +172,19 @@
                 industry training. Passionate about building detection capabilities and
                 improving security operations through automation and threat intelligence.
             </p>
+        </div>
+    </section>
+
+    <!-- Lab Accounts & Platforms Section -->
+    <section>
+        <h2>Labs & Platforms</h2>
+        <div class="card">
+            <p>Check out my practical achievements and lab profiles:</p>
+            <div class="platform-links">
+                <!-- Replace '#' with your actual profile links -->
+                <a href="https://tryhackme.com/p/OmarHassan007" class="platform-btn btn-thm" target="_blank">TryHackMe</a>
+                <a href="https://cyberdefenders.org/p/OmarHassan/" class="platform-btn btn-cyberdef" target="_blank">CyberDefenders</a>
+            </div>
         </div>
     </section>
 
@@ -119,40 +209,40 @@
 
     <section>
         <h2>Projects</h2>
-        <div class="card">
-            <h3>Detection-to-Response SOC Pipeline</h3>
-            <p>
-                Built an automated SOC workflow integrating Wazuh, n8n, and TheHive
-                for alert enrichment and incident response.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Autonomous Vulnerability Management</h3>
-            <p>
-                Developed an AI-assisted remediation workflow using Nessus, n8n,
-                SSH/MCP, and Telegram approval mechanisms.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Detection Coverage Lookup</h3>
-            <p>
-                Automated MITRE ATT&CK coverage analysis by mapping SIEM rules
-                to techniques and maintaining a live inventory.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Cowrie Honeypot with Monitoring</h3>
-            <p>
-                Deployed Cowrie Honeypot integrated with Prometheus and Slack
-                for real-time monitoring and alerting.
-            </p>
-        </div>
-        <div class="card">
-            <h3>ELK Stack & Threat Detection</h3>
-            <p>
-                Built ELK ingestion pipelines using Winlogbeat and Sysmon
-                for centralized log management and threat detection.
-            </p>
+        <!-- Horizontal Carousel Container -->
+        <div class="carousel-container">
+            
+            <div class="carousel-card">
+                <!-- Project Image Placeholder -->
+                <img src="project1-img.jpg" alt="SOC Pipeline" class="project-img">
+                <h3>Detection-to-Response Pipeline</h3>
+                <p>Built an automated SOC workflow integrating Wazuh, n8n, and TheHive for alert enrichment and incident response.</p>
+            </div>
+
+            <div class="carousel-card">
+                <img src="project2-img.jpg" alt="Vulnerability Management" class="project-img">
+                <h3>Autonomous Vulnerability Mgmt</h3>
+                <p>Developed an AI-assisted remediation workflow using Nessus, n8n, SSH/MCP, and Telegram approval mechanisms.</p>
+            </div>
+
+            <div class="carousel-card">
+                <img src="project3-img.jpg" alt="Detection Coverage" class="project-img">
+                <h3>Detection Coverage Lookup</h3>
+                <p>Automated MITRE ATT&CK coverage analysis by mapping SIEM rules to techniques and maintaining a live inventory.</p>
+            </div>
+
+            <div class="carousel-card">
+                <img src="project4-img.jpg" alt="Cowrie Honeypot" class="project-img">
+                <h3>Cowrie Honeypot Monitoring</h3>
+                <p>Deployed Cowrie Honeypot integrated with Prometheus and Slack for real-time monitoring and alerting.</p>
+            </div>
+
+            <div class="carousel-card">
+                <img src="project5-img.jpg" alt="ELK Stack" class="project-img">
+                <h3>ELK Stack & Threat Detection</h3>
+                <p>Built ELK ingestion pipelines using Winlogbeat and Sysmon for centralized log management and threat detection.</p>
+            </div>
+
         </div>
     </section>
 
@@ -193,9 +283,10 @@
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:omar.m.h.shehatta@gmail.com">omar.m.h.shehatta@gmail.com</a></li>
                 <li><strong>Phone:</strong> +20-115-888-5496</li>
-                <li><strong>LinkedIn:</strong> <a href="#">LinkedIn Profile</a></li>
-                <li><strong>GitHub:</strong> <a href="#">GitHub Profile</a></li>
-                <li><strong>Blog/Write-ups:</strong> <a href="#">Medium Blog</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/omar-hassan9999/" target="_blank">LinkedIn Profile</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/OmarHassan-99" target="_blank">GitHub Profile</a></li>
+                <li><strong>Blog/Write-ups:</strong> <a href="https://medium.com/@omar.m.h.shehatta" target="_blank">Medium Blog</a>
+                <a href="https://omarhassan.gitbook.io/omarhassan-docs" target="_blank">Gitbook</a></li>
             </ul>
         </div>
     </section>
