@@ -192,7 +192,7 @@ const internshipsData = [
     date: "Jul 2025 · 1 month",
     desc: "Provided technical support to employees, resolving software and hardware issues. Assisted in Active Directory management, including user account creation and troubleshooting domain-related issues. Assisted in deployment and configuration of workstation images.",
     tags: ["Active Directory", "Windows Server", "IT Support"],
-    logo: "./images/ELSEWEDY.png"
+    logo: "./images/elsewedy.png"
   }
 ];
 
