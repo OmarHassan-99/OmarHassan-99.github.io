@@ -11,7 +11,7 @@ const projectsData = [
     desc: "An autonomous patch recommendation workflow using Langchain and LLMs to identify and remediate web application vulnerabilities through Zaproxy.",
     tags: ["LangChain", "Web-Security", "AI"],
     link: "https://github.com/OmarHassan-99/Graduation-Project",
-    image: "./public/images/webpatcher.png"
+    image: "./images/webpatcher.png"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projectsData = [
     desc: "Deployed Cowrie honeypot with Prometheus monitoring and real-time Slack alerting for attack tracking and threat intelligence gathering.",
     tags: ["Honeypot", "Prometheus", "Slack", "Threat Intel"],
     link: "https://github.com/OmarHassan-99/Deploying-Cowrie-Honeypot-with-Prometheus-Monitoring-and-Slack-Alerting",
-    image: "./public/images/cowrie.png"
+    image: "./images/cowrie.png"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projectsData = [
     desc: "Complete SOC environment utilizing Wazuh for detection, automated incident response via n8n workflows, and case management integrated with TheHive.",
     tags: ["Wazuh", "n8n", "TheHive", "SIEM", "SOAR"],
     link: "https://github.com/OmarHassan-99/Design-and-Implementation-of-a-SOC-Platform-with-SIEM-SOAR-and-Case-Management-Integration",
-    image: "./public/images/wazuh.png"
+    image: "./images/wazuh.png"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projectsData = [
     desc: "A tool that pulls active SIEM rules via API, uses AI to map missing MITRE ATT&CK techniques, and maintains a live coverage inventory in Google Sheets.",
     tags: ["API", "MITRE ATT&CK", "AI", "SIEM"],
     link: "https://github.com/OmarHassan-99/Automated-Detection-Coverage-Lookup-To-MITRE-ATT-CK-",
-    image: "./public/images/coverage.png"
+    image: "./images/coverage.png"
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const projectsData = [
     desc: "End-to-end workflow using Nessus for scanning, AI Agents for risk reprioritization, and MCP for executing Linux remediation commands via SSH with human-in-the-loop approval.",
     tags: ["Nessus", "AI Agents", "MCP",  "n8n"],
     link: "https://github.com/OmarHassan-99/Autonomous-Vulnerability-Discovery-Remediation-using-Nessus-AI-Agents-and-MCP",
-    image: "./public/images/mcp.png"
+    image: "./images/mcp.png"
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const projectsData = [
     desc: "Engineered data ingestion pipelines using Elastic API and developed custom threat detection rules for enhanced security monitoring.",
     tags: ["ELK","Detection Rules"],
     link: "https://github.com/OmarHassan-99/WE-Innovate-X-Zerosploit-SOC-Tasks/tree/main/SOC%20engineering%20%26%20Detection%20engineering/Elastic%20API%20%2B%20more%20on%20Detection%20Rules",
-    image: "./public/images/api.png"
+    image: "./images/api.png"
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ const projectsData = [
     desc: "Complete ELK Stack deployment and configuration for log management, including data ingestion pipelines and custom dashboards for security monitoring.",
     tags: ["ELK Stack", "Logstash", "Kibana", "Monitoring"],
     link: "https://github.com/OmarHassan-99/WE-Innovate-X-Zerosploit-SOC-Tasks/tree/main/SOC%20engineering%20%26%20Detection%20engineering/ELK%20Setup%20%2B%20Detection%20Rules",
-    image: "./public/images/stack.png"
+    image: "./images/stack.png"
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ const projectsData = [
     desc: "Implementation of various cryptographic algorithms in C#, demonstrating understanding of encryption, hashing, and security protocols.",
     tags: ["C#", "Cryptography", "Encryption", "Security"],
     link: "https://github.com/OmarHassan-99/Cryptographic-Algorithms",
-    image: "./public/images/crypto.png"
+    image: "./images/crypto.png"
   },
     {
     id: 9,
@@ -83,7 +83,7 @@ const projectsData = [
     desc: "KeyMouseTracker is a Python-based keylogger and mouse activity tracker that records keystrokes and mouse interactions with timestamps. The program runs in the background using threading, efficiently logging both keyboard and mouse events concurrently. It writes logs to separate text files for easy analysis.",
     tags: ["python", "spyware", "Security"],
     link: "https://github.com/OmarHassan-99/KeyBoard-and-Mouse-Logger",
-    image: "./public/images/logger.png"
+    image: "./images/logger.png"
   }
   
 ];
@@ -183,7 +183,7 @@ const internshipsData = [
     date: "Dec 2025 - Jan 2026 · 3 weeks",
     desc: "Developed an automated Detection Coverage Lookup tool. Engineered an autonomous vulnerability management workflow using n8n and Tenable Nessus. Deployed Microsoft Sentinel with AMA log ingestion.",
     tags: ["MS Sentinel", "n8n", "Nessus", "MITRE ATT&CK"],
-    logo: "./public/images/zerosploit.jpeg"
+    logo: "./images/zerosploit.jpeg"
   },
   {
     id: 2,
@@ -192,7 +192,7 @@ const internshipsData = [
     date: "Jul 2025 · 1 month",
     desc: "Provided technical support to employees, resolving software and hardware issues. Assisted in Active Directory management, including user account creation and troubleshooting domain-related issues. Assisted in deployment and configuration of workstation images.",
     tags: ["Active Directory", "Windows Server", "IT Support"],
-    logo: "./public/images/ELSEWEDY.png"
+    logo: "./images/ELSEWEDY.png"
   }
 ];
 
@@ -205,7 +205,7 @@ const trainingData = [
     date: "Aug 2025 · 1 month",
     desc: "Conducted deep-dive investigations in ELK. Deployed and managed ELK Stack with data ingestion pipelines using Winlogbeat and Sysmon. Performed static and dynamic malware analysis using FlareVM, PEStudio, and Floss.",
     tags: ["ELK Stack", "Malware Analysis", "Sysmon", "Winlogbeat"],
-    logo: "./public/images/we.jpeg"
+    logo: "./images/we.jpeg"
   },
   {
     id: 2,
@@ -214,7 +214,7 @@ const trainingData = [
     date: "Jul 2025 · 1 month",
     desc: "Completed 120-hour cybersecurity program with 90 hours technical training on FortiGate firewalls, IPS, VPNs, and network security fundamentals. Gained practical experience configuring and securing network infrastructures.",
     tags: ["FortiGate", "IPS", "VPNs", "Network Security"],
-    logo: "./public/images/nti.png"
+    logo: "./images/nti.png"
   },
   {
     id: 3,
@@ -223,7 +223,7 @@ const trainingData = [
     date: "Apr 2025 - Jul 2025 · 3 months",
     desc: "Completed 72 hours of intensive cybersecurity training with hands-on labs covering threat detection, incident response, and security operations fundamentals aligned with Cisco's CyberOps curriculum.",
     tags: ["Cisco CyberOps", "SOC Workflows", "Threat Detection"],
-    logo: "./public/images/nti.png"
+    logo: "./images/nti.png"
   },
   {
     id: 4,
@@ -232,7 +232,7 @@ const trainingData = [
     date: "Jun 2024 - Jun 2025 · 1 year",
     desc: "Completed 360-hour SOC diploma covering CCNA 200-301, Windows Server 2019 (MCSA), Linux Administration I, Fortinet NSE4 Firewall, CEH v13, Incident Response (eCIR), Digital Forensics (eCDFP), and SIEM operations using IBM QRadar and Splunk.",
     tags: ["CCNA", "MCSA", "CEH", "eCIR", "eCDFP", "Splunk", "QRadar"],
-    logo: "./public/images/itgate.jfif"
+    logo: "./images/itgate.jfif"
   }
 ];
 
@@ -245,7 +245,7 @@ const extracurricularData = [
     date: "Sep 2023 · 2 weeks",
     desc: "Completed training focused on presentation skills, soft skills development, and professional communication at Ain Shams University's Career Center.",
     tags: ["Presentation Skills", "Soft Skills", "Professional Communication"],
-    logo: "./public/images/careercenter.jfif"
+    logo: "./images/careercenter.jfif"
   },
   {
     id: 2,
@@ -254,7 +254,7 @@ const extracurricularData = [
     date: "Aug 2023 · 2 weeks",
     desc: "Completed cybersecurity training covering web-secure coding practices, penetration testing fundamentals, and cyber defense techniques through hands-on exercises.",
     tags: ["Penetration Testing", "Cyber Defense", "Web-Secure Coding"],
-    logo: "./public/images/cyberus.jpeg"
+    logo: "./images/cyberus.jpeg"
   },
   {
     id: 3,
@@ -263,7 +263,7 @@ const extracurricularData = [
     date: "Oct 2022 - Feb 2023 · 5 months",
     desc: "Participated in problem-solving training program focusing on critical thinking, data structures, and algorithmic problem-solving techniques at Ain Shams University.",
     tags: ["Critical Thinking", "Data Structures", "Problem Solving"],
-    logo: "./public/images/acm.jfif"
+    logo: "./images/acm.jfif"
   },
   {
     id: 4,
@@ -272,7 +272,7 @@ const extracurricularData = [
     date: "Sep 2022 - May 2023 · 9 months",
     desc: "Active member of the technical team working on game design projects using Simple and Fast Multimedia Library (SFML) and participating in club organization and events.",
     tags: ["Game Design", "SFML", "Team Collaboration"],
-    logo: "./public/images/msp.png"
+    logo: "./images/msp.png"
   }
 ];
 
