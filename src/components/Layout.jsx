@@ -3,6 +3,7 @@ import ThreatAlerts from './ui/ThreatAlerts';
 import FloatingParticles from './ui/FloatingParticles';
 import CurvyLines from './ui/CurvyLines';
 import ScrollProgress from './ui/ScrollProgress';
+import MatrixRain from './ui/MatrixRain';
 
 export default function Layout({ children }) {
   const [mousePos, setMousePos] = useState({ x: -300, y: -300 });
@@ -25,6 +26,9 @@ export default function Layout({ children }) {
       <ScrollProgress />
       {/* Dot grid background */}
       <div className="fixed inset-0 bg-grid opacity-40 pointer-events-none z-0" />
+
+      {/* Cool Matrix Rain */}
+      <MatrixRain />
 
       {/* Floating Particles and Curvy Lines */}
       <CurvyLines />

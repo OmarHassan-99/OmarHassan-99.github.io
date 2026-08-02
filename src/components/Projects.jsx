@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Code2, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import Badge from './ui/Badge';
 import projectsData from '../data/projects';
 
 export default function Projects() {
   const [index, setIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
   const itemsPerPage = 3;
   const maxIndex = Math.ceil(projectsData.length / itemsPerPage) - 1;
 
@@ -62,7 +63,10 @@ export default function Projects() {
                 className="glass-card rounded-2xl overflow-hidden flex flex-col group"
               >
                 {/* Image */}
-                <div className="h-40 overflow-hidden relative">
+                <div 
+                  onClick={() => setSelectedImage(project.image)}
+                  className="h-40 overflow-hidden relative block cursor-pointer"
+                >
                   <img
                     src={project.image}
                     alt={project.title}
@@ -70,11 +74,7 @@ export default function Projects() {
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-soc-surface to-transparent opacity-70" />
-                  {/* Category badge */}
-                  <div className="absolute top-3 left-3">
-                    <Badge>{project.category}</Badge>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-soc-surface to-transparent opacity-70 pointer-events-none" />
                 </div>
 
                 {/* Content */}
@@ -86,17 +86,7 @@ export default function Projects() {
                     {project.desc}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.tags.slice(0, 4).map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-soc-bg/60 text-accent-cyan/80 border border-soc-border/30"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+
 
                   {/* Link */}
                   <motion.a
@@ -131,6 +121,39 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative max-w-5xl max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl border border-soc-border/50 bg-soc-bg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors border border-white/20"
+              >
+                <X size={20} />
+              </button>
+              <img
+                src={selectedImage}
+                alt="Project preview"
+                className="w-full h-full object-contain max-h-[90vh]"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

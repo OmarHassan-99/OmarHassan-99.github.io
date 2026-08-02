@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Terminal as TerminalIcon, Shield, Mail, Phone, Globe, FileText } from 'lucide-react';
+import GlitchText from './ui/GlitchText';
 
 export default function Hero() {
   return (
@@ -81,7 +82,7 @@ export default function Hero() {
         >
           Omar{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-green to-accent-cyan glow-text">
-            Hassan
+            <GlitchText text="Hassan" />
           </span>
         </motion.h1>
 

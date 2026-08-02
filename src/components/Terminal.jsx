@@ -12,11 +12,11 @@ const commands = [
     output: null,
     type: 'json',
     json: {
-      roles: ['SOC Analyst', 'SOC Engineer' , "Security Automation Engineer"],
-      siem: ['Splunk', 'Q-Radar','ELK'],
+      roles: ['SOC Analyst', 'SOC Engineer', "Security Automation Engineer"],
+      siem: ['Splunk', 'Q-Radar', 'ELK'],
       automation: ['n8n', 'LangChain'],
-      programming_Languages: ['Python', 'C++', 'JavaScript'],
-      
+      programming_Languages: ['Python', 'C++', 'JavaScript', 'Java'],
+
     },
   },
   {
@@ -28,7 +28,7 @@ const commands = [
     prompt: 'ls -la /recent_achievements/',
     type: 'ls',
     files: [
-      'WebPatcher:_Intelligent_Workflow_For_Detecting _And_Patching _Web_Vulnerabilities_(Graduation_Project)',
+      'WebPatcher:_Intelligent_Workflow_For_Detecting_And_Patching_Web_Vulnerabilities_(Graduation_Project)',
       'Advanced_Endpoint_Investigation_THM',
       'ZeroSploit_SOC_Engineer_Internship',
     ],

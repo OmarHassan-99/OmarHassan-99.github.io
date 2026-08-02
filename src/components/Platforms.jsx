@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Target as Crosshair, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
-import { TryHackMeIcon, CyberDefendersIcon } from './ui/Icons';
+import { TryHackMeIcon, CyberDefendersIcon, CyberHazeIcon } from './ui/Icons';
 import SectionHeader from './SectionHeader';
 import Badge, { getDifficultyVariant } from './ui/Badge';
 import { thmLabs, cyberdefendersLabs, cyberhazeLabs } from '../data/labs';
@@ -15,7 +15,7 @@ const platformData = {
 const platformIcons = {
   THM: <TryHackMeIcon size={18} />,
   CyberDefenders: <CyberDefendersIcon size={18} />,
-  CyberHaze: <Shield size={18} />,
+  CyberHaze: <CyberHazeIcon size={18} />,
 };
 
 const platformLabels = {

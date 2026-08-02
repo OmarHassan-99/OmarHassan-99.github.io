@@ -217,7 +217,17 @@ export const thmLabs = [
   { id: 215, name: "Defensive Security Intro", difficulty: "Easy" },
   { id: 216, name: "Intro to Cyber Threat Intel", difficulty: "Easy" },
   { id: 217, name: "Billing", difficulty: "Easy" },
-  { id: 218, name: "SOC Fundamentals", difficulty: "Easy" }
+  { id: 218, name: "SOC Fundamentals", difficulty: "Easy" },
+  { id: 219, name: "Monitoring Active Directory", difficulty: "Medium" },
+  { id: 220, name: "Detecting AD Credential Attacks", difficulty: "Medium" },
+  { id: 221, name: "The Concierge Knows Too Much", difficulty: "Easy" },
+  { id: 222, name: "Room 404", difficulty: "Easy" },
+  { id: 223, name: "Complimentary", difficulty: "Easy" },
+  { id: 224, name: "Packed Light", difficulty: "Easy" },
+  { id: 225, name: "Detecting AD Post-Exploitation", difficulty: "Medium" },
+  { id: 226, name: "Detecting AD Lateral Movement", difficulty: "Medium" },
+  { id: 227, name: "Beach Bar", difficulty: "Easy" },
+  { id: 228, name: "Overheard at Breakfast", difficulty: "Easy" }
 ];
 
 // CyberDefenders Labs
@@ -261,6 +271,7 @@ export const cyberdefendersLabs = [
 
 // CyberHaze Labs
 export const cyberhazeLabs = [
+  { id: 9, name: "Volatile Secrets", difficulty: "Easy" },
   { id: 1, name: "E-Evil PDF", difficulty: "Easy" },
   { id: 2, name: "Telegram Malicious Extension", difficulty: "Hard" },
   { id: 3, name: "Phishing Investigation: Wallet Verification Scam", difficulty: "Medium" },
